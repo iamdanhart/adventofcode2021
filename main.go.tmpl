@@ -1,0 +1,39 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"time"
+)
+
+func main() {
+	start := time.Now()
+	partOne()
+	duration := time.Since(start)
+	partTwo()
+	duration2 := time.Since(start)
+	fmt.Printf("p1: %s, p2: %s\n", duration, duration2-duration)
+}
+func makeScanner(test bool) *bufio.Scanner {
+	var f *os.File
+	if test {
+		f, _ = os.Open("inputs/testinput")
+	} else {
+		f, _ = os.Open("inputs/input")
+	}
+	reader := bufio.NewReader(f)
+	return bufio.NewScanner(reader)
+}
+func partOne() {
+	scanner := makeScanner(false)
+	for scanner.Scan() {
+		// line := scanner.Text()
+	}
+}
+func partTwo() {
+	scanner := makeScanner(false)
+	for scanner.Scan() {
+		// line := scanner.Text()
+	}
+}
